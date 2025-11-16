@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamrith Consulting Services LLP (HCS)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="assets/hcs-logo.png" class="nav-logo" alt="HCS Logo" />
+            <span class="nav-title">Hamrith Consulting Services LLP</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#directors">Directors</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="dark-toggle" id="darkToggle">🌙</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero fade-in">
+        <img src="assets/hcs-logo.png" class="hero-logo" alt="HCS Logo" />
+        <h1 class="hero-title">Hamrith Consulting Services LLP (HCS)</h1>
+        <p class="hero-tagline">
+            Enterprise Expertise. Startup Speed. Fraction of the Cost.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#services" class="btn-primary">Explore Services</a>
+            <a href="#contact" class="btn-secondary">Request Consultation</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section fade-in">
+        <h2>About Us</h2>
+        <p>
+            Hamrith Consulting Services LLP (HCS) is a modern technology consulting firm
+            offering AI-driven solutions, enterprise learning programs, digital transformation,
+            automation, program management, and analytics.
+        </p>
+
+        <p>
+            We combine enterprise-grade expertise with startup execution speed to help
+            organizations scale, transform, and build capability across teams and functions.
+        </p>
+    </section>
+
+    <!-- DIRECTORS SECTION -->
+    <section id="directors" class="section fade-in">
+        <h2>Our Directors</h2>
+
+        <div class="director-container">
+
+            <div class="director-card">
+                <img src="assets/director-pushpatha.jpg" alt="Director Pushpatha" class="director-photo">
+                <h3>Pushpatha</h3>
+                <p><strong>Director</strong></p>
+                <p>
+                    Leads strategy, operations, and enterprise governance at HCS. Focuses on
+                    business transformation, customer delivery, and capability building.
+                </p>
+            </div>
+
+            <div class="director-card">
+                <img src="assets/director-bhaskar.jpg" alt="Director Bhaskar" class="director-photo">
+                <h3>Bhaskar DV</h3>
+                <p><strong>Director & Consultant</strong></p>
+                <p>
+                    Program Manager with 15+ years of experience in L&D, AI/ML, digital transformation,
+                    global operations, and enterprise learning programs across Microsoft and consulting environments.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="section fade-in">
+        <h2>Our Services</h2>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>AI & Machine Learning Solutions</h3>
+                <p>Custom ML models, NLP, automation, analytics, and AI-driven decision systems.</p>
+            </div>
+
+            <div class="card">
+                <h3>Enterprise Learning & Development</h3>
+                <p>End-to-end curriculum design, capability development, and global L&D program delivery.</p>
+            </div>
+
+            <div class="card">
+                <h3>Digital Transformation</h3>
+                <p>Automation using Power Platform, DevOps, D365, cloud transformations, process modernization.</p>
+            </div>
+
+            <div class="card">
+                <h3>Data Analytics & Insights</h3>
+                <p>Power BI dashboards, SQL reporting, data engineering workflows, and business intelligence.</p>
+            </div>
+
+            <div class="card">
+                <h3>Program & Project Management</h3>
+                <p>Governance, KPI frameworks, multi-region delivery, operations excellence.</p>
+            </div>
+
+            <div class="card">
+                <h3>Cloud & Technology Enablement</h3>
+                <p>Azure ecosystem, GitHub, Salesforce, AEM workflows, automation pipelines.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section fade-in">
+        <h2>Projects</h2>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>AI-driven Sentiment Analysis</h3>
+                <p>Built NLP-driven investment intelligence system for a startup using ML pipelines and analytics.</p>
+            </div>
+
+            <div class="card">
+                <h3>Microsoft Workforce Enablement</h3>
+                <p>Led enterprise learning programs for 10,000+ engineers across US, EMEA, and APAC.</p>
+            </div>
+
+            <div class="card">
+                <h3>Enterprise Automation</h3>
+                <p>Delivered automation using Power Automate, Azure DevOps, D365 CRM, and AEM workflows.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section fade-in">
+        <h2>Contact Us</h2>
+        <p>Email (Work): <strong>operations@hcsbharath.com</strong></p>
+        <p>Email (Director): <strong>bhaskarvenkatesh23@gmail.com</strong></p>
+    </section>
+
+    <footer>
+        © 2025 Hamrith Consulting Services LLP (HCS). All Rights Reserved. Designed & Developed by Bhaskar DV. Unauthorized use, reproduction, or distribution of this content is strictly prohibited.
+    </footer>
+
+    <!-- DARK MODE SCRIPT -->
+    <script>
+        const toggle = document.getElementById("darkToggle");
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+            localStorage.setItem("dark-mode", document.body.classList.contains("dark"));
+        });
+        if (localStorage.getItem("dark-mode") === "true") {
+            document.body.classList.add("dark");
+            toggle.textContent = "☀️";
+        }
+    </script>
+</body>
+
+</html>
