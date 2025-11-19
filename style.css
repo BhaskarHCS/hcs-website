@@ -261,6 +261,64 @@ footer {
 }
 
 /* ---------------------------------------------------
+   Projects – Tabs & Icons
+--------------------------------------------------- */
+
+.project-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.project-tab {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #154c79;
+    background: #ffffff;
+    color: #154c79;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.project-tab:hover {
+    background: #154c79;
+    color: #ffffff;
+}
+
+.project-tab.active {
+    background: #154c79;
+    color: #ffffff;
+}
+
+.project-grid .project-card {
+    position: relative;
+}
+
+.project-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project-tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.project-tags span {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #eef3fa;
+    color: #154c79;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------
    Dark Mode
 --------------------------------------------------- */
 
