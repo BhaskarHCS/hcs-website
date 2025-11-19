@@ -319,6 +319,41 @@ footer {
 }
 
 /* ---------------------------------------------------
+   Project Animations
+--------------------------------------------------- */
+
+/* Fade + Slide In Animation */
+@keyframes projectFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.project-card {
+    animation: projectFadeIn 0.4s ease forwards;
+    transition: 0.3s ease;
+}
+
+/* Smooth Filter Transition */
+.project-card.hide {
+    opacity: 0 !important;
+    transform: translateY(20px) scale(0.98);
+    pointer-events: none;
+}
+
+/* Enhanced Card Hover Animation */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 14px 25px rgba(0,0,0,0.15);
+}
+
+
+/* ---------------------------------------------------
    Dark Mode
 --------------------------------------------------- */
 
