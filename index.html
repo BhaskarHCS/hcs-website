@@ -269,39 +269,6 @@
     </div>
 </section>
 
-/* ---------------------------------------------------
-   Project Animations
---------------------------------------------------- */
-
-/* Fade + Slide In Animation */
-@keyframes projectFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.98);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.project-card {
-    animation: projectFadeIn 0.4s ease forwards;
-}
-
-/* Smooth Filter Transition */
-.project-card.hide {
-    opacity: 0 !important;
-    transform: translateY(20px) scale(0.98);
-    pointer-events: none;
-}
-
-/* Enhanced Card Hover Animation */
-.project-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 14px 25px rgba(0,0,0,0.15);
-}
-
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="section fade-in">
@@ -348,10 +315,10 @@
 
                 if (category === "all" || cats.includes(category)) {
 
-  		       card.classList.remove("hide");
+  		   card.classList.remove("hide");
     		   card.style.display = "block";
     		   setTimeout(() => card.style.opacity = "1", 10); 
-				} else {
+		} else {
     		card.classList.add("hide");
     		setTimeout(() => card.style.display = "none", 200);
 }
