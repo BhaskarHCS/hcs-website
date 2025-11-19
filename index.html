@@ -133,78 +133,142 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="section fade-in">
+<section id="projects" class="section fade-in">
     <h2>Projects</h2>
 
-    <div class="card-grid">
+    <!-- Tabs -->
+    <div class="project-tabs">
+        <button class="project-tab active" data-category="all">All</button>
+        <button class="project-tab" data-category="ai">🧠 AI</button>
+        <button class="project-tab" data-category="nlp">🔤 NLP</button>
+        <button class="project-tab" data-category="cv">📸 Computer Vision</button>
+        <button class="project-tab" data-category="ml">🤖 Machine Learning</button>
+        <button class="project-tab" data-category="analytics">📊 Analytics</button>
+    </div>
 
-        <div class="card">
+    <!-- Project Cards -->
+    <div class="card-grid project-grid">
+
+        <div class="card project-card" data-category="ai nlp">
+            <div class="project-icon">🧠</div>
             <h3>Intelligent Multilingual Document Understanding</h3>
-            <p>A multilingual RAG system that processes documents, extracts insights, and delivers accurate question–answer responses across languages.</p>
+            <p>A multilingual RAG system that processes documents, extracts insights, and delivers accurate Q&A across languages.</p>
+            <div class="project-tags">
+                <span>AI</span><span>NLP</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ai cv">
+            <div class="project-icon">🛰️</div>
             <h3>Satellite Imagery Search & Detection</h3>
-            <p>Computer vision pipelines enabling visual search, object detection, and retrieval from satellite imagery for geospatial intelligence.</p>
+            <p>Computer vision pipelines for visual search, object detection, and retrieval from satellite imagery for geospatial intelligence.</p>
+            <div class="project-tags">
+                <span>AI</span><span>CV</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ai nlp">
+            <div class="project-icon">🔤</div>
             <h3>Machine Learning Language Translation</h3>
             <p>A multilingual translation system trained on ACL datasets, enabling seamless communication across European language pairs.</p>
+            <div class="project-tags">
+                <span>AI</span><span>NLP</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ai nlp analytics">
+            <div class="project-icon">📈</div>
             <h3>NLP-Driven Stock Market Sentiment Analysis</h3>
             <p>An AI platform that analyzes financial news, identifies market sentiment, and improves weekly stock price forecasting.</p>
+            <div class="project-tags">
+                <span>AI</span><span>NLP</span><span>Analytics</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ai cv">
+            <div class="project-icon">🎬</div>
             <h3>Face Recognition for Movie Metadata</h3>
             <p>A deep-learning facial recognition system that tags actors in movie scenes, automating metadata generation for streaming apps.</p>
+            <div class="project-tags">
+                <span>AI</span><span>CV</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ml ai">
+            <div class="project-icon">📡</div>
             <h3>Signal Quality Prediction</h3>
             <p>A neural network classifier that predicts equipment signal quality using telemetry data to improve reliability.</p>
+            <div class="project-tags">
+                <span>ML</span><span>AI</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ml cv ai">
+            <div class="project-icon">🏠</div>
             <h3>Multi-Digit Recognition (SVHN)</h3>
             <p>A CNN-based solution that recognizes multi-digit street numbers from real-world images to support mapping and OCR systems.</p>
+            <div class="project-tags">
+                <span>ML</span><span>CV</span><span>AI</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="analytics">
+            <div class="project-icon">🧾</div>
             <h3>Automated SQL Business Reporting</h3>
-            <p>Quarterly SQL-driven performance dashboards delivering actionable insights for company leadership.</p>
+            <p>Quarterly SQL-driven performance dashboards delivering actionable insights for leadership decision-making.</p>
+            <div class="project-tags">
+                <span>Analytics</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ml analytics ai">
+            <div class="project-icon">💳</div>
             <h3>Credit Card Churn Prediction</h3>
             <p>A classification model identifying customers likely to churn and providing insights to improve retention strategies.</p>
+            <div class="project-tags">
+                <span>ML</span><span>AI</span><span>Analytics</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ml analytics">
+            <div class="project-icon">📂</div>
             <h3>Stock Clustering (TradeAhead)</h3>
-            <p>An unsupervised learning project grouping stocks by financial indicators to guide investment strategy.</p>
+            <p>An unsupervised learning solution grouping stocks by financial indicators to guide investment strategy and portfolio design.</p>
+            <div class="project-tags">
+                <span>ML</span><span>Analytics</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ml ai analytics">
+            <div class="project-icon">🛂</div>
             <h3>Visa Approval Prediction (EasyVisa)</h3>
             <p>ML-based classification that predicts visa approval likelihood and highlights key drivers influencing outcomes.</p>
+            <div class="project-tags">
+                <span>ML</span><span>AI</span><span>Analytics</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="ml analytics">
+            <div class="project-icon">🏨</div>
             <h3>Hotel Booking Cancellation Prediction</h3>
             <p>A supervised ML model predicting cancellations to reduce lost revenue and optimize hospitality planning.</p>
+            <div class="project-tags">
+                <span>ML</span><span>Analytics</span>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="card project-card" data-category="analytics">
+            <div class="project-icon">🧪</div>
             <h3>A/B Testing & Statistical Analysis</h3>
-            <p>A statistical experiment evaluating landing page performance to measure conversion uplift and engagement.</p>
+            <p>Statistical experimentation evaluating landing page performance to measure conversion uplift and engagement across variants.</p>
+            <div class="project-tags">
+                <span>Analytics</span>
+            </div>
         </div>
 
     </div>
 </section>
+
 
 
     <!-- CONTACT SECTION -->
