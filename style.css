@@ -220,16 +220,84 @@ h2 {
     border-radius: 10px;
     margin-bottom: 15px;
     background: #dfe6f1; /* fallback color before image loads */
+
+
 }
 
 /* ---------------------------------------------------
-   Contact Section
+   Contact – Get in Touch Form
 --------------------------------------------------- */
 
-#contact p {
-    font-size: 1.1rem;
-    margin: 8px 0;
+.contact-layout {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 20px;
 }
+
+.contact-info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.contact-form-wrapper {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-form {
+    background: #f8f9fa;
+    padding: 22px 22px 18px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+.contact-form .form-group {
+    margin-bottom: 14px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #154c79;
+    font-size: 0.95rem;
+}
+
+.contact-form label span {
+    color: #d11;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #cfd3db;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #154c79;
+    box-shadow: 0 0 0 2px rgba(21, 76, 121, 0.15);
+}
+
+.contact-submit {
+    border: none;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.contact-hint {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
 
 /* ---------------------------------------------------
    Footer
@@ -264,11 +332,36 @@ footer {
    Projects – Tabs & Icons
 --------------------------------------------------- */
 
+.project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
 .project-tabs {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 25px;
+}
+
+.project-thumb {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
 }
 
 .project-tab {
@@ -293,10 +386,6 @@ footer {
     color: #ffffff;
 }
 
-.project-grid .project-card {
-    position: relative;
-}
-
 .project-icon {
     font-size: 1.8rem;
     margin-bottom: 10px;
@@ -316,7 +405,13 @@ footer {
     background: #eef3fa;
     color: #154c79;
     font-weight: 600;
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
 }
+
 
 /* ---------------------------------------------------
    Project Animations
