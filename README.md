@@ -47,4 +47,4 @@ or email **operations@hcsbharath.com**
 
 ---
 
-© 2025 Hamrith Consulting Services LLP (HCS). All Rights Reserved.
+© 2025 Hamrith Consulting Service LLP (HCS). All Rights Reserved, unauthorized use, reproduction, or distribution of this content is strictly prohibited.
