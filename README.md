@@ -1,8 +1,8 @@
-# Hamrith Consulting Services LLP (HCS)
+# Hamrith Consulting Service LLP (HCS)
 
 **Enterprise Expertise. Startup Speed. Fraction of the Cost.**
 
-Hamrith Consulting Services LLP (HCS) is a consulting and technology enablement firm focused on **AI, Machine Learning, Enterprise Learning, Digital Transformation, and Data-Driven Operations**.  
+Hamrith Consulting Service LLP (HCS) is a consulting and technology enablement firm focused on **AI, Machine Learning, Enterprise Learning, Digital Transformation, and Data-Driven Operations**.  
 We help organizations design, build, and scale modern solutions with enterprise discipline and startup agility.
 
 ---
