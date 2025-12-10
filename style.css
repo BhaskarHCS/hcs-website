@@ -54,8 +54,21 @@ h2 {
 }
 
 .nav-logo {
-    width: 45px;
-    height: auto;
+  height: 82px;      
+  width: auto;
+  max-height: 88px;
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    height: 64px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    height: 56px;
+  }
 }
 
 .nav-title {
@@ -502,4 +515,3 @@ body.dark footer {
         font-size: 2rem;
     }
 }
-
