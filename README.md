@@ -42,7 +42,7 @@ We help organizations design, build, and scale modern solutions with enterprise 
 ## 🚀 Hire Us / Work With Us
 We partner with startups, enterprises, and institutions to deliver **measurable outcomes** across AI, learning, and transformation initiatives.
 
-👉 Visit **https://www.hcsbharath.com/contact.html**  
+👉 Visit **https://www.hcsbharath.com/#contact**  
 or email **operations@hcsbharath.com**
 
 ---
