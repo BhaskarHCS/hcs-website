@@ -498,6 +498,16 @@ body.dark footer {
     background: #333;
 }
 
+
+section[id] {
+    scroll-margin-top: 160px !important;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* ---------------------------------------------------
    Responsive
 --------------------------------------------------- */
@@ -515,3 +525,4 @@ body.dark footer {
         font-size: 2rem;
     }
 }
+
