@@ -429,6 +429,11 @@
 
 </script>
 </body>
+<script>
+const navHeight = document.querySelector(".navbar").offsetHeight;
+document.querySelectorAll("section[id]").forEach(sec => {
+    sec.style.scrollMarginTop = navHeight + "px";
+});
+</script>
 </html>
-
 
