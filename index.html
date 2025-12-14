@@ -291,57 +291,69 @@
 
 
     <!-- CONTACT / GET IN TOUCH SECTION -->
-    <section id="contact" class="section fade-in">
-        <h2>Get in Touch</h2>
-        <p>
-            Share your requirement, and we’ll get back with next steps and a proposal.
-        </p>
+<section id="contact" class="section fade-in">
+    <h2>Get in Touch</h2>
+    <p>
+        Share your requirement, and we’ll get back with next steps and a proposal.
+    </p>
 
-        <div class="contact-layout">
-            <!-- Left: Info -->
-            <div class="contact-info">
-                <h3>Contact Details</h3>
-                <p>Email (Work): <strong>operations@hcsbharath.com</strong></p>
-                <p>Email (Director): <strong>bhaskar.venkatesh@hcsbharath.com</strong></p>
-                <p style="margin-top:8px;font-size:0.95rem;color:#555;">
-                    You can also write to us directly, or use the form to send a structured request.
-                </p>
-            </div>
-
-            <!-- Right: Form -->
-            <div class="contact-form-wrapper">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="contactName">Name <span>*</span></label>
-                        <input type="text" id="contactName" name="name" required />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contactEmail">Email <span>*</span></label>
-                        <input type="email" id="contactEmail" name="email" required />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contactMessage">Request / Requirement <span>*</span></label>
-                        <textarea id="contactMessage" name="message" rows="4" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primary contact-submit">
-                        Send Request
-                    </button>
-
-                    <p class="contact-hint">
-                        This will open your email app with all the details pre-filled  
-                        to <strong>operations@hcsbharath.com</strong> (CC: <strong>bhaskar.venkatesh@hcsbharath.com</strong>).
-                    </p>
-                </form>
-            </div>
+    <div class="contact-layout">
+        <!-- Left: Info -->
+        <div class="contact-info">
+            <h3>Contact Details</h3>
+            <p>Email (Work): <strong>operations@hcsbharath.com</strong></p>
+            <p>Email (Director): <strong>bhaskar.venkatesh@hcsbharath.com</strong></p>
+            <p style="margin-top:8px;font-size:0.95rem;color:#555;">
+                You can also write to us directly, or use the form to send a structured request.
+            </p>
         </div>
-    </section>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrapper">
+<form id="contactForm" class="contact-form" novalidate>
+
+    <div class="form-group">
+        <label for="contactName">Name <span>*</span></label>
+        <input type="text" id="contactName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="contactEmail">Email <span>*</span></label>
+        <input type="email" id="contactEmail" required />
+    </div>
+
+    <div class="form-group">
+        <label for="contactMessage">Request / Requirement <span>*</span></label>
+        <textarea id="contactMessage" rows="4" required></textarea>
+    </div>
+
+    <!-- Honeypot field (hidden from users, bots will fill it) -->
+    <input type="text"
+           name="company"
+           id="company"
+           tabindex="-1"
+           autocomplete="off"
+           style="display:none;">
+
+    <button type="submit" class="btn-primary contact-submit">
+        Send Request
+    </button>
+
+    <p class="contact-hint">
+        This will open your email app with all the details pre-filled  
+        to <strong>operations@hcsbharath.com</strong>  
+        (CC: <strong>bhaskar.venkatesh@hcsbharath.com</strong>).
+    </p>
+
+</form>
+
+        </div>
+    </div>
+</section>
 
 
     <footer>
-        © 2025 Hamrith Consulting Service LLP (HCS). All Rights Reserved, unauthorized use, reproduction, or distribution of this content is strictly prohibited.
+        © 2025 Hamrith Consulting Services LLP (HCS). All Rights Reserved, unauthorized use, reproduction, or distribution of this content is strictly prohibited.
     </footer>
 
 <!-- DARK MODE SCRIPT -->
@@ -364,79 +376,79 @@
     const projectTabs = document.querySelectorAll(".project-tab");
     const projectCards = document.querySelectorAll(".project-card");
 
-    projectTabs.forEach(tab => {
+       projectTabs.forEach(tab => {
         tab.addEventListener("click", () => {
             // Remove active class from all tabs
             projectTabs.forEach(t => t.classList.remove("active"));
             tab.classList.add("active");
 
-            // Get selected category
             const category = tab.dataset.category;
 
-            // Show/hide cards based on category
             projectCards.forEach(card => {
                 const cats = card.dataset.category.split(" ");
 
                 if (category === "all" || cats.includes(category)) {
-
-  		   card.classList.remove("hide");
-    		   card.style.display = "block";
-    		   setTimeout(() => card.style.opacity = "1", 10); 
-		} else {
-    		card.classList.add("hide");
-    		setTimeout(() => card.style.display = "none", 200);
-}
-
+                    card.classList.remove("hide");
+                    card.style.display = "block";
+                    setTimeout(() => card.style.opacity = "1", 10);
+                } else {
+                    card.classList.add("hide");
+                    setTimeout(() => card.style.display = "none", 200);
+                }
             });
         });
     });
+</script>
 
-    // CONTACT FORM MAILTO HANDLER
-    const contactForm = document.getElementById("contactForm");
-    if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-            e.preventDefault();
 
-            const name = document.getElementById("contactName").value.trim();
-            const email = document.getElementById("contactEmail").value.trim();
-            const message = document.getElementById("contactMessage").value.trim();
+<script>
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-            if (!name || !email || !message) {
-                alert("Please fill in Name, Email and Request.");
-                return;
-            }
+    const name = document.getElementById("contactName").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const message = document.getElementById("contactMessage").value.trim();
 
-            const subject = encodeURIComponent("New enquiry from " + name + " via HCS website");
-            const bodyLines = [
-                "Name: " + name,
-                "Email: " + email,
-                "",
-                "Request / Requirement:",
-                message
-            ];
-            const body = encodeURIComponent(bodyLines.join("\n"));
-
-            const mailtoLink =
-                "mailto:operations@hcsbharath.com" +
-                "?cc=bhaskar.venkatesh@hcsbharath.com" +
-                "&subject=" + subject +
-                "&body=" + body;
-
-            // Opens user's email client with everything pre-filled
-            window.location.href = mailtoLink;
-        });
+    if (!name || !email || !message) {
+        alert("Please fill in Name, Email and Request.");
+        return;
     }
 
+    const subject = encodeURIComponent(
+        "New enquiry from " + name + " via HCS website"
+    );
+
+    const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n\n" +
+        "Request / Requirement:\n" +
+        message
+    );
+
+    const mailtoLink =
+        "mailto:operations@hcsbharath.com" +
+        "?cc=bhaskar.venkatesh@hcsbharath.com" +
+        "&subject=" + subject +
+        "&body=" + body;
+
+    window.location.href = mailtoLink;
+
+setTimeout(() => {
+    window.location.href = "thank-you.html";
+}, 1500);
+
+});
 </script>
-</body>
+
 <script>
 const navHeight = document.querySelector(".navbar").offsetHeight;
 document.querySelectorAll("section[id]").forEach(sec => {
     sec.style.scrollMarginTop = navHeight + "px";
 });
 </script>
+
+</body>
+
 </html>
-
-
 
 
