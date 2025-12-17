@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://www.hcsbharath.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.hcsbharath.com/assets/hcs-og-banner.jpg" />
-    
+
     <!-- Optional: Twitter/X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://www.hcsbharath.com/assets/hcs-og-banner.jpg" />
@@ -375,24 +375,10 @@
         © 2025 Hamrith Consulting Services LLP (HCS). All Rights Reserved, unauthorized use, reproduction, or distribution of this content is strictly prohibited.
     </footer>
 
-<!-- DARK MODE SCRIPT -->
 <script>
-    const toggle = document.getElementById("darkToggle");
-    toggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-        toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-        localStorage.setItem("dark-mode", document.body.classList.contains("dark"));
-    });
-    if (localStorage.getItem("dark-mode") === "true") {
-        document.body.classList.add("dark");
-        toggle.textContent = "☀️";
-    }
-
-
-
-    // PROJECT TABS FILTER SCRIPT
-
-<script>
+/* ============================
+   PROJECT TABS FILTER SCRIPT
+============================ */
 
 const projectTabs = document.querySelectorAll(".project-tab");
 const projectCards = document.querySelectorAll(".project-card");
@@ -400,7 +386,6 @@ const projectCards = document.querySelectorAll(".project-card");
 projectTabs.forEach(tab => {
   tab.addEventListener("click", () => {
 
-    // Active tab styling
     projectTabs.forEach(t => t.classList.remove("active"));
     tab.classList.add("active");
 
@@ -425,11 +410,11 @@ projectTabs.forEach(tab => {
     });
   });
 });
-
 </script>
 
-   </script>
-
+/* ============================
+   CONTACT FORM
+============================ */
 
 <script>
 document.getElementById("contactForm").addEventListener("submit", function (e) {
@@ -480,7 +465,4 @@ document.querySelectorAll("section[id]").forEach(sec => {
 </body>
 
 </html>
-
-
-
 
