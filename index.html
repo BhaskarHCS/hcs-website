@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://www.hcsbharath.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.hcsbharath.com/assets/hcs-og-banner.jpg" />
-
+    
     <!-- Optional: Twitter/X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://www.hcsbharath.com/assets/hcs-og-banner.jpg" />
@@ -189,9 +189,16 @@
     </div>
 
     <!-- Project Cards -->
-    <div class="card-grid project-grid">
-       
+<!-- Project Cards -->
 <div class="card-grid project-grid">
+
+    <!-- RAG based Question & Answering System -->
+    <div class="card project-card" data-category="ml ai">
+        <img src="assets/case-rag.jpg" class="project-thumb">
+        <h3>Retrieval-Augmented Generation (RAG) based Question & Answering System</h3>
+        <p>Integrating NLP and vector retrieval to enhance knowledge discovery.</p>
+        <div class="project-tags"><span>ML</span><span>AI</span></div>
+    </div>
 
     <!-- Multilingual Understanding -->
     <div class="card project-card" data-category="ai nlp">
@@ -205,7 +212,7 @@
     <div class="card project-card" data-category="ai nlp">
         <img src="assets/case-translation.jpg" class="project-thumb">
         <h3>Machine Learning Language Translation</h3>
-        <p>A multilingual translation system trained on ACL datasets, enabling seamless communication across European language pairs.</p>
+        <p>A multilingual translation system trained on ACL datasets.</p>
         <div class="project-tags"><span>AI</span><span>NLP</span></div>
     </div>
 
@@ -213,7 +220,7 @@
     <div class="card project-card" data-category="ai cv">
         <img src="assets/case-satellite.jpg" class="project-thumb">
         <h3>Satellite Imagery Search & Detection</h3>
-        <p>Computer vision pipelines for visual search, object detection, and retrieval from satellite imagery.</p>
+        <p>Computer vision pipelines for visual search, object detection, and retrieval.</p>
         <div class="project-tags"><span>AI</span><span>CV</span></div>
     </div>
 
@@ -221,7 +228,7 @@
     <div class="card project-card" data-category="ai nlp analytics">
         <img src="assets/case-stock.jpg" class="project-thumb">
         <h3>NLP-Driven Stock Market Sentiment Analysis</h3>
-        <p>An AI platform that analyzes financial news, identifies market sentiment, and improves weekly stock forecasting.</p>
+        <p>Analyzing financial news to improve weekly stock forecasting.</p>
         <div class="project-tags"><span>AI</span><span>NLP</span><span>Analytics</span></div>
     </div>
 
@@ -229,7 +236,7 @@
     <div class="card project-card" data-category="ai cv">
         <img src="assets/case-face.jpg" class="project-thumb">
         <h3>Face Recognition for Movie Metadata</h3>
-        <p>A deep-learning facial recognition system that tags actors in movie scenes to automate metadata generation.</p>
+        <p>Deep-learning system to tag actors in movie scenes.</p>
         <div class="project-tags"><span>AI</span><span>CV</span></div>
     </div>
 
@@ -237,7 +244,7 @@
     <div class="card project-card" data-category="ml ai">
         <img src="assets/case-signal.jpg" class="project-thumb">
         <h3>Signal Quality Prediction</h3>
-        <p>A neural network classifier that predicts equipment signal quality using telemetry data.</p>
+        <p>Neural network classifier predicting equipment signal quality.</p>
         <div class="project-tags"><span>ML</span><span>AI</span></div>
     </div>
 
@@ -245,15 +252,15 @@
     <div class="card project-card" data-category="ml cv ai">
         <img src="assets/case-svhn.jpg" class="project-thumb">
         <h3>Multi-Digit SVHN Recognition</h3>
-        <p>CNN-based solution recognizing multi-digit street numbers from images for OCR & mapping.</p>
+        <p>CNN-based recognition of street-level house numbers.</p>
         <div class="project-tags"><span>ML</span><span>CV</span><span>AI</span></div>
     </div>
 
-    <!-- SQL Reporting -->
+    <!-- SQL -->
     <div class="card project-card" data-category="analytics">
         <img src="assets/case-sql.jpg" class="project-thumb">
         <h3>Automated SQL Business Reporting</h3>
-        <p>Quarterly SQL-driven dashboards providing business insights for leadership decision-making.</p>
+        <p>Quarterly dashboards for executive decision-making.</p>
         <div class="project-tags"><span>Analytics</span></div>
     </div>
 
@@ -385,32 +392,43 @@
 
     // PROJECT TABS FILTER SCRIPT
 
-    const projectTabs = document.querySelectorAll(".project-tab");
-    const projectCards = document.querySelectorAll(".project-card");
+<script>
 
-       projectTabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            // Remove active class from all tabs
-            projectTabs.forEach(t => t.classList.remove("active"));
-            tab.classList.add("active");
+const projectTabs = document.querySelectorAll(".project-tab");
+const projectCards = document.querySelectorAll(".project-card");
 
-            const category = tab.dataset.category;
+projectTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
 
-            projectCards.forEach(card => {
-                const cats = card.dataset.category.split(" ");
+    // Active tab styling
+    projectTabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
 
-                if (category === "all" || cats.includes(category)) {
-                    card.classList.remove("hide");
-                    card.style.display = "block";
-                    setTimeout(() => card.style.opacity = "1", 10);
-                } else {
-                    card.classList.add("hide");
-                    setTimeout(() => card.style.display = "none", 200);
-                }
-            });
+    const selected = tab.dataset.category;
+
+    projectCards.forEach(card => {
+      const categories = card.dataset.category.split(" ");
+
+      if (selected === "all" || categories.includes(selected)) {
+        card.style.display = "block";
+        requestAnimationFrame(() => {
+          card.style.opacity = "1";
+          card.style.transform = "scale(1)";
         });
+      } else {
+        card.style.opacity = "0";
+        card.style.transform = "scale(0.96)";
+        setTimeout(() => {
+          card.style.display = "none";
+        }, 200);
+      }
     });
+  });
+});
+
 </script>
+
+   </script>
 
 
 <script>
@@ -462,7 +480,6 @@ document.querySelectorAll("section[id]").forEach(sec => {
 </body>
 
 </html>
-
 
 
 
