@@ -527,3 +527,12 @@ html {
     }
 }
 
+/* ===== AGENTIC AI ===== */
+
+.agentic-section{background:#f7faff;text-align:center}
+.agentic-intro{max-width:800px;margin:0 auto 35px;color:#444}
+.agentic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.agentic-card{background:#fff;border-radius:14px;padding:26px;border:1px solid #e1e6f0;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+.agentic-thumb{width:100%;max-height:220px;object-fit:contain;margin-bottom:12px}
+.agentic-sub{font-weight:600;color:#0d6efd}
+.agentic-cta{margin-top:35px}
